@@ -53,6 +53,10 @@
 
 @property (nonatomic, strong) UIColor *selectedDateTextColor;
 
+#pragma mark - Internals
+
+@property (nonatomic, strong, readonly) UIScrollView *daysScrollView;
+
 #pragma mark - Helpers
 
 // Returns weekday names truncated to specified length.

@@ -18,20 +18,13 @@ static const CGFloat kWeekdayLabelHeight = 20.0f;
 }
 @end
 
-@interface ASDayPicker()<UIScrollViewDelegate> {
-    NSCalendar *_calendar;
-
-    NSArray *_weekdayTitles;
-    NSMutableArray *_weekdayLabels;
-
-    UIScrollView *_daysScrollView;
-
-    CGFloat _dx, _dh;
-    CGFloat _scrollStartOffsetX;
-
-    NSMutableArray *_days;
-    UIButton *_lastSelectedButton;
-}
+@interface ASDayPicker() <UIScrollViewDelegate>
+@property (nonatomic, strong, readonly) NSCalendar *calendar;
+@property (nonatomic, strong, readonly) NSMutableArray *weekdayLabels;
+@property (nonatomic, readonly) CGFloat dx, dh;
+@property (nonatomic, readonly) CGFloat scrollStartOffsetX;
+@property (nonatomic, strong, readonly) NSMutableArray *days;
+@property (nonatomic, strong, readonly) UIButton *lastSelectedButton;
 @end
 
 @implementation ASDayPicker
